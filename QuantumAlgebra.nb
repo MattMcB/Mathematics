@@ -1,0 +1,24 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{"(*",RowBox[{"Packages"," ","definition"}],"*)"}],"\n",RowBox[
+{RowBox[{"interfacemode"," ","="," ","\"Generic\""}],";"}]}],"\n",RowBox[{RowBox[
+{RowBox[{"AddPackageDirectory","[","SPack_","]"}]," ",":="," ",RowBox[{"If","[",RowBox[
+{RowBox[{RowBox[{"Position","[",RowBox[{"$Path",","," ","SPack"}],"]"}]," ","=="," ",RowBox[
+{"{","}"}]}],",","\n","   \t",RowBox[{RowBox[{"$Path"," ","="," ",RowBox[{"Append","[",RowBox[
+{"$Path",","," ","SPack"}],"]"}]}],";"}]}],"\n","   ","]"}]}],";"}],"\n",RowBox[{RowBox[
+{"Switch","[",RowBox[{"interfacemode",",","\n","  ","\"Generic\"",",","\n","  ",RowBox[
+{"AddPackageDirectory","[",RowBox[{"NotebookDirectory","[","]"}],"]"}]}],"\n","  ","]"}],";"}],"\n",RowBox[
+{RowBox[{"ClearAll","[","Subscript","]"}],";"}],"\n",RowBox[{"<<"," ","AbstractAlgebra`"}]}],
+"Input",ExpressionUUID -> "d4dad629-0da1-47e0-a920-393b3aa0d781"],Cell[
+BoxData[{RowBox[
+{"ClearAll","[","algebra","]"}],"\n",RowBox[{RowBox[{RowBox[{RowBox[{"algebra","[","\"groundfield\"","]"}],"[","\"generators\"","]"}]," ","="," ",RowBox[
+{"{",RowBox[{"q",","," ","\[Alpha]"}],"}"}]}],";"}],"\n",RowBox[{RowBox[{RowBox[{"algebra","[","\"generators\"","]"}]," ","="," ",RowBox[
+{"{",RowBox[{"\[CapitalEpsilon]",","," ","\[CapitalKappa]",","," ","F",","," ","H"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"Unprotect","[","NonCommutativeMultiply","]"}],";"}],"\n",RowBox[{RowBox[
+{"ClearAll","[","NonCommutativeMultiply","]"}],";"}],"\n",RowBox[{RowBox[{"AbstractAlgebra`FinitelyGenerated`DefineTensorAlgebraWithModules","[","\n","  ","algebra","]"}],";"}],"\n",RowBox[
+{RowBox[{"AbstractAlgebra`Localization`LocalizeAlgebra","[","algebra","]"}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"NCCollect","[","expr_","]"}]," ",":="," ","\n","  ",RowBox[{"AbstractAlgebra`General`NCCollect","[",RowBox[
+{"expr",","," ",RowBox[{"algebra","[","\"groundfield\"","]"}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"NCCollect","[",RowBox[{"expr_",","," ","Simplify_"}],"]"}]," ",":="," ","\n","  ",RowBox[
+{"AbstractAlgebra`General`NCCollect","[",RowBox[{"expr",","," ",RowBox[{"algebra","[","\"groundfield\"","]"}],","," ","\n","   ","Simplify"}],"]"}]}],";"}]}],
+"Input",ExpressionUUID -> "12a74ce0-0175-4b1a-a9f4-18f0440a4481"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "13. for Wolfram Cloud 1.61.2.3 (February 12, 2022)"]
